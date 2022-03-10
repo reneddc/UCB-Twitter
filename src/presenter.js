@@ -1,15 +1,16 @@
-import sumar from "./sumador";
-
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+const _titulo = document.querySelector("#titulo");
+const _detalle = document.querySelector("#detalle");
+const form = document.querySelector("#post-form");
+const div = document.querySelector("#lista-publicaciones");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  var titulo = _titulo.value;
+  var detalle = _detalle.value;
 
-  div.innerHTML = "<p> " + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = `<div>  
+                      <p>Titulo: ${titulo}</p>
+                      <p>Titulo: ${detalle}</p>
+                  </div>`;
 });
