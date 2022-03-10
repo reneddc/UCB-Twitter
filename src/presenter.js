@@ -2,6 +2,7 @@ const _titulo = document.querySelector("#titulo");
 const _detalle = document.querySelector("#detalle");
 const form = document.querySelector("#post-form");
 const div = document.querySelector("#lista-publicaciones");
+var manyPosts = "";
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -13,10 +14,10 @@ form.addEventListener("submit", (event) => {
     alert("No es posible publicar un post sin título");
   }
   else{
-    div.innerHTML = `<div>  
-      <p>Titulo: ${titulo}</p>
-      <p>Titulo: ${detalle}</p>
-    </div>`;
-    alert(`${titulo.length}`);
+    manyPosts = manyPosts + `<div>  
+                              <p>Titulo: ${titulo}</p>
+                              <p>Titulo: ${detalle}</p>
+                            </div>`;
+    div.innerHTML = manyPosts;
   }
 });
