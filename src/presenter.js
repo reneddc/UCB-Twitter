@@ -17,5 +17,6 @@ form.addEventListener("submit", (event) => {
       <p>Titulo: ${titulo}</p>
       <p>Titulo: ${detalle}</p>
     </div>`;
+    alert(`${titulo.length}`);
   }
 });
