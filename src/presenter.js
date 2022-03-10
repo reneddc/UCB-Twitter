@@ -9,8 +9,13 @@ form.addEventListener("submit", (event) => {
   var titulo = _titulo.value;
   var detalle = _detalle.value;
 
-  div.innerHTML = `<div>  
-                      <p>Titulo: ${titulo}</p>
-                      <p>Titulo: ${detalle}</p>
-                  </div>`;
+  if (titulo.length == 0){
+    alert("No es posible publicar un post sin título");
+  }
+  else{
+    div.innerHTML = `<div>  
+      <p>Titulo: ${titulo}</p>
+      <p>Titulo: ${detalle}</p>
+    </div>`;
+  }
 });
